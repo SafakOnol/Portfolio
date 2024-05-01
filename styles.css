@@ -60,36 +60,43 @@ h2 {
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
-    overflow: hidden; /* Clear floats */
+    overflow: hidden; 
+    display: flex; 
+    align-items: center; 
 }
 
 .project-content {
-    float: left; /* Float the content to the left */
-    width: 100%; /* Adjust the width based on the image size */
-    margin-bottom: 20px;
+    flex: 1; /* Take up remaining space */
+    margin-left: 20px;
+    /* float: left; 
+    width: calc(100% - 200px); 
+    margin-bottom: 20px; */
 }
 
 .project h3 {
     font-size: 30px;
     color: #FFD700;
+    margin-bottom: 10px;
 }
 
 .project p {
     font-size: 28px;
     margin-bottom: 10px;
-    white-space: nowrap; /* Prevent line breaks */
-    overflow: hidden; /* Hide overflowing text */
-    text-overflow: ellipsis; /* Add ellipsis for overflow text */
+    margin-right: 20px;
+    /* white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;  */
 }
 
 .project-thumbnail {
-    float: none;
+    /* float: none;
     margin-left: auto;
     margin-right: auto;
-    display: block;
-    width: 80%; /* Set the width of the image */
+    display: block; */
+    width: 200px; /* Set the width of the image */
     height: auto; /* Maintain aspect ratio */
     border-radius: 5px;
+    margin-right: 20px;
 }
 
 .btn {
@@ -122,20 +129,31 @@ h2 {
         font-size: 22px; /* Reduce section heading font size */
     }
     .project {
-        padding: 15px; /* Reduce padding for projects */
-        margin-bottom: 15px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .project-thumbnail {
+        width: 200px; 
+        margin-left: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .project-content {
+        margin-left: 0; /* Reset margin */
+        line-height: 1; 
     }
     .project h3 {
         font-size: 20px; /* Reduce project title font size */
     }
     .project p {
-        font-size: 18px; /* Reduce project description font size */
-    }
-    .project-thumbnail {
-        width: 100%; /* Make image full width */
-        margin: 0; /* Remove margin */
+        font-size: 18px; 
+        margin-bottom: 20px;
     }
     .btn {
+        margin-top: 20px;
         padding: 10px 20px; /* Reduce button padding */
         font-size: 18px; /* Reduce button font size */
     }
