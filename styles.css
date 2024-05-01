@@ -27,8 +27,8 @@ header {
 }
 
 header h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
+    font-size: 2em;
+    margin-bottom: 10px;
 }
 
 nav ul {
@@ -37,7 +37,7 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin-right: 40px;
+    margin-right: 20px;
 }
 
 nav ul li a {
@@ -46,26 +46,27 @@ nav ul li a {
 }
 
 section {
-    padding: 40px;
+    padding: 20px;
 }
 
 h2 {
     font-size: 32px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     color: #FFD700;
 }
 
 .project {
     background-color: #444;
-    padding: 40px;
-    margin-bottom: 40px;
+    padding: 20px;
+    margin-bottom: 20px;
     border-radius: 10px;
     overflow: hidden; /* Clear floats */
 }
 
 .project-content {
     float: left; /* Float the content to the left */
-    width: calc(100% - 180px); /* Adjust the width based on the image size */
+    width: 100%; /* Adjust the width based on the image size */
+    margin-bottom: 20px;
 }
 
 .project h3 {
@@ -75,13 +76,18 @@ h2 {
 
 .project p {
     font-size: 28px;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
+    white-space: nowrap; /* Prevent line breaks */
+    overflow: hidden; /* Hide overflowing text */
+    text-overflow: ellipsis; /* Add ellipsis for overflow text */
 }
 
 .project-thumbnail {
-    float: right; /* Float the image to the right */
-    margin-left: 20px; /* Add spacing between content and image */
-    width: 150px; /* Set the width of the image */
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 80%; /* Set the width of the image */
     height: auto; /* Maintain aspect ratio */
     border-radius: 5px;
 }
@@ -101,4 +107,36 @@ h2 {
     background-color: #FFA500;
 }
 
-/* Add more styles as needed */
+/* Media query for smaller screens */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 20px; /* Adjust font size for smaller screens */
+    }
+    header h1 {
+        font-size: 1.5em; /* Reduce header font size for smaller screens */
+    }
+    nav ul li {
+        margin-right: 10px; /* Reduce margin for menu items */
+    }
+    h2 {
+        font-size: 22px; /* Reduce section heading font size */
+    }
+    .project {
+        padding: 15px; /* Reduce padding for projects */
+        margin-bottom: 15px;
+    }
+    .project h3 {
+        font-size: 20px; /* Reduce project title font size */
+    }
+    .project p {
+        font-size: 18px; /* Reduce project description font size */
+    }
+    .project-thumbnail {
+        width: 100%; /* Make image full width */
+        margin: 0; /* Remove margin */
+    }
+    .btn {
+        padding: 10px 20px; /* Reduce button padding */
+        font-size: 18px; /* Reduce button font size */
+    }
+}
